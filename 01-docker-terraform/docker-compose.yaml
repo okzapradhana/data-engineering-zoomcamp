@@ -1,0 +1,27 @@
+version: '3'
+services:
+  postgres:
+    image: postgres:13
+    environment:
+      - POSTGRES_USER=okza
+      - POSTGRES_PASSWORD=zoomcamp
+      - POSTGRES_DB=ny_taxi
+    networks:
+      - pg_network
+    volumes:
+      - "./ny_taxi_data:/var/lib/postgresql/data:rw"
+    ports:
+      - "5432:5432"
+  pg_admin:
+    image: dpage/pgadmin4
+    environment:
+      - PGADMIN_DEFAULT_EMAIL=okza@archidelago.tech
+      - PGADMIN_DEFAULT_PASSWORD=zoomcamp
+    networks:
+      - pg_network
+    ports:
+      - "8080:80"
+
+networks:
+  pg_network:
+    name: "zoomcamp_network"
