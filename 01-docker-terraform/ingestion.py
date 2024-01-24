@@ -29,7 +29,7 @@ class BaseIngestion(object):
         if os.path.exists(self.filepath) is False:
             urlretrieve(self.url, self.filepath)
 
-    def read(self) -> pl.DataType:
+    def read(self) -> pl.DataFrame:
         self.download()
         if self.filepath.endswith('.parquet') or self.filepath.endswith('.pq'):
             df = pl.read_parquet(self.filepath, low_memory=True)
