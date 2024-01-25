@@ -53,11 +53,31 @@ ORDER BY 2 DESC
 
 7. Terraform output
 
-Terraform used the selected providers to generate the following execution plan. Resource actions are
-indicated with the following symbols:
+Terraform used the selected providers to generate the following
+execution plan. Resource actions are indicated with the
+following symbols:
   + create
 
 Terraform will perform the following actions:
+
+  # google_bigquery_dataset.zoomcamp_dataset will be created
+  + resource "google_bigquery_dataset" "zoomcamp_dataset" {
+      + creation_time              = (known after apply)
+      + dataset_id                 = "zoomcamp_dataset"
+      + default_collation          = (known after apply)
+      + delete_contents_on_destroy = false
+      + effective_labels           = (known after apply)
+      + etag                       = (known after apply)
+      + id                         = (known after apply)
+      + is_case_insensitive        = (known after apply)
+      + last_modified_time         = (known after apply)
+      + location                   = "asia-southeast2"
+      + max_time_travel_hours      = (known after apply)
+      + project                    = "de-laboratory"
+      + self_link                  = (known after apply)
+      + storage_billing_model      = (known after apply)
+      + terraform_labels           = (known after apply)
+    }
 
   # google_storage_bucket.zoomcamp_bucket will be created
   + resource "google_storage_bucket" "zoomcamp_bucket" {
@@ -89,7 +109,7 @@ Terraform will perform the following actions:
         }
     }
 
-Plan: 1 to add, 0 to change, 0 to destroy.
+Plan: 2 to add, 0 to change, 0 to destroy.
 
 Do you want to perform these actions?
   Terraform will perform the actions described above.
@@ -97,8 +117,10 @@ Do you want to perform these actions?
 
   Enter a value: yes
 
+google_bigquery_dataset.zoomcamp_dataset: Creating...
 google_storage_bucket.zoomcamp_bucket: Creating...
-google_storage_bucket.zoomcamp_bucket: Creation complete after 2s [id=okza_zoomcamp_data]
+google_bigquery_dataset.zoomcamp_dataset: Creation complete after 3s [id=projects/de-laboratory/datasets/zoomcamp_dataset]
+google_storage_bucket.zoomcamp_bucket: Creation complete after 8s [id=okza_zoomcamp_data]
 
-Apply complete! Resources: 1 added, 0 changed, 0 destroyed.
+Apply complete! Resources: 2 added, 0 changed, 0 destroyed.
 ```
