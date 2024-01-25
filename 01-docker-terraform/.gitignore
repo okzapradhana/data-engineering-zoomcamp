@@ -3,6 +3,7 @@ venv
 *.parquet
 *.csv
 ny_taxi_data/
+answer.md
 
 # Local .terraform directories
 **/.terraform*
