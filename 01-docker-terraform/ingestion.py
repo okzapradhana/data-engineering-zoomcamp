@@ -49,7 +49,7 @@ if __name__ == "__main__":
 
     parser.add_argument("-U", "--user", help="Postgres user")
     parser.add_argument("-p", "--password", help="Postgres password")
-    parser.add_argument("-db", "--database", help="Postgres database")
+    parser.add_argument("-db", "--db", help="Postgres database")
     parser.add_argument("-H", "--host", help="Postgres host", default="localhost")
     parser.add_argument("-P", "--port", help="Postgres port", default=5432)
     parser.add_argument("-f", "--filepath", help="Filepath to read")

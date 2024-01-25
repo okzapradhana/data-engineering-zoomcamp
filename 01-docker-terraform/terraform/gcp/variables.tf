@@ -15,7 +15,7 @@ variable "region" {
 
 variable "gcs_bucket_name" {
   type = string
-  default = "zoomcamp_data"
+  default = "okza_zoomcamp_data"
 }
 
 variable "location" {
