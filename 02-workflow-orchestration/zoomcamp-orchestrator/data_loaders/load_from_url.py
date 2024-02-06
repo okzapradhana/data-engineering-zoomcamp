@@ -12,7 +12,6 @@ def load_data_from_api(*args, **kwargs):
     Template for loading data from API
     """
     dfs = []
-    parse_dates = ['tpep_pickup_datetime', 'tpep_dropoff_datetime']
 
     for month in [10, 11, 12]:
         url = f'https://d37ci6vzurychx.cloudfront.net/trip-data/green_tripdata_2020-{month}.parquet'

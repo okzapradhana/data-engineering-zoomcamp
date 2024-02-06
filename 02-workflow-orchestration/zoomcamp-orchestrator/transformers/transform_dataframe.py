@@ -12,6 +12,7 @@ def convert_column_to_lowercase(columns: []):
         result = re.sub("([a-z])([A-Z])", r"\1_\2", column)
         result = re.sub("([A-Z]{2})([a-zA-Z])", r"\1_\2", result)
         converted_cols.append(result.lower())
+
     return converted_cols
 
 @transformer

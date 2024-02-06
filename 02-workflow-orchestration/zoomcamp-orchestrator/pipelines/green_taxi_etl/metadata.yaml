@@ -10,12 +10,12 @@ blocks:
   language: python
   name: load_from_url
   retry_config: null
-  status: executed
+  status: updated
   timeout: null
   type: data_loader
   upstream_blocks: []
   uuid: load_from_url
-- all_upstream_blocks_executed: true
+- all_upstream_blocks_executed: false
   color: null
   configuration: {}
   downstream_blocks:
@@ -27,13 +27,13 @@ blocks:
   language: python
   name: transform_dataframe
   retry_config: null
-  status: executed
+  status: updated
   timeout: null
   type: transformer
   upstream_blocks:
   - load_from_url
   uuid: transform_dataframe
-- all_upstream_blocks_executed: true
+- all_upstream_blocks_executed: false
   color: null
   configuration: {}
   downstream_blocks: []
@@ -49,7 +49,7 @@ blocks:
   upstream_blocks:
   - transform_dataframe
   uuid: write_partitioned_to_gcs
-- all_upstream_blocks_executed: true
+- all_upstream_blocks_executed: false
   color: null
   configuration: {}
   downstream_blocks: []
@@ -86,7 +86,7 @@ settings:
 spark_config: {}
 tags: []
 type: python
-updated_at: '2024-02-06T18:00:51+00:00'
+updated_at: '2024-02-06T18:16:13+00:00'
 uuid: green_taxi_etl
 variables_dir: /home/src/mage_data/zoomcamp-orchestrator
 widgets: []
