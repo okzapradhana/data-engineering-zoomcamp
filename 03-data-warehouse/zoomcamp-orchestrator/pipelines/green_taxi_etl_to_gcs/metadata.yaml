@@ -3,7 +3,7 @@ blocks:
   color: null
   configuration: {}
   downstream_blocks:
-  - to_gcs
+  - transform_datetime
   executor_config: null
   executor_type: local_python
   has_callback: false
@@ -18,6 +18,23 @@ blocks:
 - all_upstream_blocks_executed: true
   color: null
   configuration: {}
+  downstream_blocks:
+  - to_gcs
+  executor_config: null
+  executor_type: local_python
+  has_callback: false
+  language: python
+  name: transform_datetime
+  retry_config: null
+  status: executed
+  timeout: null
+  type: transformer
+  upstream_blocks:
+  - extract_green_taxi
+  uuid: transform_datetime
+- all_upstream_blocks_executed: true
+  color: null
+  configuration: {}
   downstream_blocks: []
   executor_config: null
   executor_type: local_python
@@ -25,11 +42,11 @@ blocks:
   language: python
   name: to_gcs
   retry_config: null
-  status: updated
+  status: executed
   timeout: null
   type: data_exporter
   upstream_blocks:
-  - extract_green_taxi
+  - transform_datetime
   uuid: to_gcs
 cache_block_output_in_memory: false
 callbacks: []
@@ -42,7 +59,7 @@ executor_config: {}
 executor_count: 1
 executor_type: null
 extensions: {}
-name: solitary crafter
+name: green_taxi_etl_to_gcs
 notification_config: {}
 remote_variables_dir: null
 retry_config: {}
@@ -52,7 +69,7 @@ settings:
 spark_config: {}
 tags: []
 type: python
-updated_at: '2024-02-14T17:36:10+00:00'
-uuid: solitary_crafter
+updated_at: '2024-02-15T04:08:00+00:00'
+uuid: green_taxi_etl_to_gcs
 variables_dir: /home/src/mage_data/zoomcamp-orchestrator
 widgets: []

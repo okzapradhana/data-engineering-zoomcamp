@@ -32,7 +32,6 @@ def export_data_to_google_cloud_storage(df: DataFrame, **kwargs) -> None:
     Docs: https://docs.mage.ai/design/data-loading#googlecloudstorage
     """
     # https://stackoverflow.com/questions/77162729/writing-dataframes-as-partitioned-parquet-object-in-polars-with-pyarrow
-    # table = pa.Table.from_pandas(df)
 
     path = "{bucket}/{table_name}/{file}.parquet".format(bucket="okza_zoomcamp_data", table_name="green_taxi_2022", file="green_taxi_data")
     gcs = gcsfs.GCSFileSystem()
