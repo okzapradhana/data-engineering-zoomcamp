@@ -16,7 +16,7 @@ provider "google" {
 
 resource "google_compute_instance" "mageai" {
   name         = "mageai"
-  machine_type = "e2-micro"
+  machine_type = var.machine_type
   zone         = var.zone
 
   boot_disk {
@@ -24,7 +24,7 @@ resource "google_compute_instance" "mageai" {
     device_name = "mageai-disk"
     initialize_params {
       image = "projects/ubuntu-os-cloud/global/images/ubuntu-2004-focal-v20240125"
-      size  = 10
+      size  = var.disk_size
       type  = "pd-balanced"
     }
 

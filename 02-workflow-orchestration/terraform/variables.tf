@@ -22,3 +22,13 @@ variable "email" {
   default = "de-zoomcamp@de-laboratory.iam.gserviceaccount.com"
   type    = string
 }
+
+variable "machine_type" {
+  default = "e2-standard-2"
+  type = string
+}
+
+variable "disk_size" {
+  default = 20
+  type = number
+}
