@@ -44,7 +44,7 @@ resource "google_compute_instance" "mageai" {
 
     queue_count = 0
     stack_type  = "IPV4_ONLY"
-    subnetwork  = "projects/de-laboratory/regions/${var.region}/subnetworks/${google_compute_network.vpc_network.name}"
+    subnetwork  = "projects/${var.project}/regions/${var.region}/subnetworks/${google_compute_network.vpc_network.name}"
   }
 
   scheduling {

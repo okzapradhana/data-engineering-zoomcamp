@@ -4,7 +4,7 @@ variable "credentials" {
 }
 
 variable "project" {
-  default = "de-laboratory"
+  default = "speedy-league-416712"
   type    = string
 }
 
@@ -19,7 +19,7 @@ variable "zone" {
 }
 
 variable "email" {
-  default = "de-zoomcamp@de-laboratory.iam.gserviceaccount.com"
+  default = "de-zoomcamp@speedy-league-416712.iam.gserviceaccount.com"
   type    = string
 }
 
