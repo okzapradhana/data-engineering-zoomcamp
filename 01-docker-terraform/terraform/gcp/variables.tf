@@ -5,7 +5,7 @@ variable "credentials" {
 
 variable "project" {
   type = string
-  default = "de-laboratory"
+  default = "speedy-league-416712"
 }
 
 variable "region" {
@@ -15,7 +15,7 @@ variable "region" {
 
 variable "gcs_bucket_name" {
   type = string
-  default = "okza_zoomcamp_data"
+  default = "okza_zoomcamp_data_v2"
 }
 
 variable "location" {
