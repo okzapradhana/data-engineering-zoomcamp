@@ -1,3 +1,4 @@
 *.json
 .venv
 logs
+*.parquet

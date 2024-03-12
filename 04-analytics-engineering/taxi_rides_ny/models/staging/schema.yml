@@ -1,0 +1,8 @@
+version: 2
+sources:
+  - name: staging
+    database: speedy-league-416712
+    schema: zoomcamp_dataset
+    tables:
+      - name: green_trips_20192020
+      - name: yellow_trips_20192020
