@@ -1,12 +1,13 @@
 MONTHS=('01' '02' '03' '04' '05' '06' '07' '08' '09' '10' '11' '12')
 DESTINATION_BUCKET=okza_zoomcamp_data_v2/04-analytics-engineering
+GOOGLE_CREDS_FILE=$(pwd)/de-zoomcamp-speed.json
 DATA_DIR=$(pwd)/data
 
 echo "Creating directory at $DATA_DIR, skipping if exists"
 mkdir -p $DATA_DIR
 
 # USING SERVICE ACCOUNT TO AUTH
-gcloud auth activate-service-account --key-file=de-zoomcamp-speed.json
+gcloud auth activate-service-account --key-file=$GOOGLE_CREDS_FILE
 
 for MONTH in "${MONTHS[@]}"
 do
