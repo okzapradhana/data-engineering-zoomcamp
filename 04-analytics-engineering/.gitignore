@@ -2,3 +2,7 @@
 .venv
 logs
 *.parquet
+.dlt
+__pycache__
+duckdb
+*.csv

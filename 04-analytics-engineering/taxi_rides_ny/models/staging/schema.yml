@@ -6,3 +6,4 @@ sources:
     tables:
       - name: green_trips_20192020
       - name: yellow_trips_20192020
+      - name: fhv_trips_2019
